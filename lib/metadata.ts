@@ -7,13 +7,13 @@ import {
   BUSINESS_ADDRESS,
 } from "./utils";
 
-// ─── Base Open Graph image (1200×630) ────────────────────────────────────────
+// ─── Base Open Graph image ────────────────────────────────────────────────────
 const OG_IMAGE = {
-  url: `${SITE_URL}/og-image.jpg`,
-  width: 1200,
-  height: 630,
-  alt: "JMC Removals — House Removals Warrington, Cheshire",
-  type: "image/jpeg",
+  url: `${SITE_URL}/og-image.webp`,
+  width: 800,
+  height: 600,
+  alt: "JMC Removals van outside a large Cheshire property — professional house removal service Warrington",
+  type: "image/webp",
 };
 
 // ─── Default / site-wide metadata ────────────────────────────────────────────
@@ -92,7 +92,7 @@ export const defaultMetadata: Metadata = {
     title: `${BUSINESS_NAME} | House Removals Warrington`,
     description:
       "Family-owned removal company in Warrington. Professional house removals, man & van & house clearance across Cheshire & the North West.",
-    images: [`${SITE_URL}/og-image.jpg`],
+    images: [`${SITE_URL}/og-image.webp`],
     site: "@jmcremovals",
     creator: "@jmcremovals",
   },
@@ -197,7 +197,7 @@ export function generatePageMetadata({
       card: "summary_large_image",
       title: `${title} | ${BUSINESS_NAME}`,
       description,
-      images: [`${SITE_URL}/og-image.jpg`],
+      images: [`${SITE_URL}/og-image.webp`],
       site: "@jmcremovals",
     },
 

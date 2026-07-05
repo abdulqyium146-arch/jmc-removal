@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { generatePageMetadata } from "@/lib/metadata";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -60,6 +61,17 @@ export default function AboutPage() {
               </div>
 
               <div className="space-y-6">
+                {/* Real team photo */}
+                <div className="rounded-2xl overflow-hidden shadow-md">
+                  <Image
+                    src="/images/jmc-removals-team-loading-van.webp"
+                    alt="JMC Removals team loading the van — professional removal crew in Warrington"
+                    width={500}
+                    height={380}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+
                 {/* Contact card */}
                 <div className="rounded-2xl border border-brand-100 bg-brand-50 p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Get in Touch</h3>

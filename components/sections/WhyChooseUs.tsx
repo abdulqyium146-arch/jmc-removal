@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Shield, Heart, PoundSterling, Users, Award, Clock } from "lucide-react";
 
 const reasons = [
@@ -95,27 +96,76 @@ export default function WhyChooseUs() {
             </div>
           </motion.div>
 
-          {/* Right — feature grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {reasons.map((reason, index) => {
-              const Icon = reason.icon;
-              return (
-                <motion.div
-                  key={reason.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="rounded-2xl border border-gray-100 bg-gray-50 p-5"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 border border-brand-100 mb-4">
-                    <Icon className="h-5 w-5 text-brand-600" strokeWidth={1.75} />
-                  </div>
-                  <h3 className="text-sm font-bold text-gray-900 mb-2">{reason.title}</h3>
-                  <p className="text-xs text-gray-600 leading-relaxed">{reason.description}</p>
-                </motion.div>
-              );
-            })}
+          {/* Right — photo collage + features */}
+          <div className="space-y-5">
+            {/* Photo collage */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="grid grid-cols-2 gap-3"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                <Image
+                  src="/images/jmc-removals-team-warrington.webp"
+                  alt="JMC Removals team in Warrington — professional removal crew"
+                  width={300}
+                  height={225}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                <Image
+                  src="/images/jmc-removals-van-house-sale-warrington.webp"
+                  alt="JMC Removals van at property — house removal Warrington"
+                  width={300}
+                  height={225}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                <Image
+                  src="/images/jmc-removals-house-removal-detached-home.webp"
+                  alt="JMC Removals van at detached home — removal company Warrington"
+                  width={300}
+                  height={225}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                <Image
+                  src="/images/jmc-removals-fleet-vans-warrington.webp"
+                  alt="JMC Removals fleet of vans in Warrington — removal company"
+                  width={300}
+                  height={225}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+
+            {/* Feature cards (3 key ones) */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {reasons.slice(0, 3).map((reason, index) => {
+                const Icon = reason.icon;
+                return (
+                  <motion.div
+                    key={reason.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="rounded-2xl border border-gray-100 bg-gray-50 p-4 text-center"
+                  >
+                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-50 border border-brand-100 mb-3 mx-auto">
+                      <Icon className="h-4 w-4 text-brand-600" strokeWidth={1.75} />
+                    </div>
+                    <h3 className="text-xs font-bold text-gray-900 mb-1">{reason.title}</h3>
+                    <p className="text-xs text-gray-500 leading-relaxed">{reason.description}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

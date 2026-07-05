@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Services from "@/components/sections/Services";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -116,6 +117,17 @@ export default function HouseRemovalsPage() {
 
               {/* Sidebar */}
               <div className="space-y-5">
+                {/* Real photo */}
+                <div className="rounded-2xl overflow-hidden shadow-md">
+                  <Image
+                    src="/images/jmc-removals-van-house-sale-warrington.webp"
+                    alt="JMC Removals van outside property during house removal in Warrington"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+
                 <div className="rounded-2xl border border-brand-100 bg-brand-50 p-6">
                   <h3 className="text-base font-bold text-gray-900 mb-4">Get a Free Quote</h3>
                   <p className="text-sm text-gray-600 mb-4">

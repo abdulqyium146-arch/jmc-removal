@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
@@ -107,6 +108,16 @@ export default function ManAndVanPage() {
               </div>
 
               <div className="space-y-5">
+                <div className="rounded-2xl overflow-hidden shadow-md">
+                  <Image
+                    src="/images/jmc-removals-branded-van-cheshire.webp"
+                    alt="JMC Removals branded man and van in Warrington, Cheshire"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+
                 <div className="rounded-2xl border border-brand-100 bg-brand-50 p-6">
                   <h3 className="text-base font-bold text-gray-900 mb-4">Book Man & Van</h3>
                   <p className="text-sm text-gray-600 mb-4">
