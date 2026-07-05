@@ -2,7 +2,7 @@ import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
-import { faqSchema, serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { faqSchema, serviceSchema, breadcrumbSchema, localAreaSchema, webPageSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/utils";
 import Link from "next/link";
 import { CheckCircle, MapPin } from "lucide-react";
@@ -34,8 +34,10 @@ export default function LocalAreaPage({ area }: LocalAreaPageProps) {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: `Removals ${area.name} | JMC Removals`, description: area.description, url, breadcrumb: [{ name: "Home", url: SITE_URL }, { name: `Removals ${area.name}`, url }] })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localAreaSchema(area.name, area.slug, area.county)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(area.faqs)) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: `Removals ${area.name}`, description: area.description, url, areaServed: area.name })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: `Removals ${area.name}`, description: area.description, url, areaServed: area.name, serviceType: "Removal Service" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: `Removals ${area.name}`, url }])) }} />
 
       <ServicePageHero

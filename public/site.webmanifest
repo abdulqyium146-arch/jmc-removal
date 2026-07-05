@@ -1,0 +1,65 @@
+{
+  "name": "JMC Removals — House Removals Warrington",
+  "short_name": "JMC Removals",
+  "description": "Family-owned removal company in Warrington, Cheshire. House removals, man & van, house clearance and furniture removals across the North West.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "lang": "en-GB",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "categories": ["business", "utilities"],
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Get a Free Quote",
+      "short_name": "Free Quote",
+      "description": "Request a free, no-obligation removal quote",
+      "url": "/contact",
+      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "House Removals",
+      "short_name": "Removals",
+      "description": "House removal services in Warrington",
+      "url": "/house-removals",
+      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Call Us",
+      "short_name": "Call",
+      "description": "Call JMC Removals on 01925 812700",
+      "url": "tel:01925812700",
+      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "label": "JMC Removals homepage"
+    }
+  ]
+}

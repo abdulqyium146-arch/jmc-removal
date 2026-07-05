@@ -1,57 +1,100 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/utils";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date().toISOString();
+type ChangeFreq = "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
 
-  const staticPages = [
-    { url: SITE_URL, priority: 1.0, changeFrequency: "weekly" as const },
-    { url: `${SITE_URL}/about`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${SITE_URL}/contact`, priority: 0.9, changeFrequency: "monthly" as const },
-    { url: `${SITE_URL}/blog`, priority: 0.7, changeFrequency: "weekly" as const },
-  ];
+interface SitemapEntry {
+  url: string;
+  lastModified: string;
+  changeFrequency: ChangeFreq;
+  priority: number;
+}
 
-  const servicePages = [
-    "house-removals",
-    "man-and-van",
-    "house-clearance",
-    "furniture-removals",
-    "storage-collection",
-  ].map((slug) => ({
-    url: `${SITE_URL}/${slug}`,
-    priority: 0.9,
-    changeFrequency: "monthly" as const,
-  }));
+const now = new Date().toISOString();
 
-  const areaPages = [
-    "warrington-removals",
-    "wigan-removals",
-    "widnes-removals",
-    "st-helens-removals",
-    "northwich-removals",
-  ].map((slug) => ({
-    url: `${SITE_URL}/${slug}`,
-    priority: 0.85,
-    changeFrequency: "monthly" as const,
-  }));
-
-  const blogPages = [
-    "moving-house-checklist",
-    "how-much-do-removals-cost",
-    "packing-tips-house-move",
-    "man-and-van-vs-removal-company",
-    "house-clearance-guide",
-    "moving-with-children-tips",
-  ].map((slug) => ({
-    url: `${SITE_URL}/blog/${slug}`,
-    priority: 0.6,
-    changeFrequency: "yearly" as const,
-  }));
-
-  return [...staticPages, ...servicePages, ...areaPages, ...blogPages].map((page) => ({
-    url: page.url,
+// ─── Homepage ────────────────────────────────────────────────────────────────
+const homePage: SitemapEntry[] = [
+  {
+    url: SITE_URL,
     lastModified: now,
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
-  }));
+    changeFrequency: "weekly",
+    priority: 1.0,
+  },
+];
+
+// ─── High-priority conversion pages ──────────────────────────────────────────
+const corePage: SitemapEntry[] = [
+  { url: `${SITE_URL}/contact`,  lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+  { url: `${SITE_URL}/about`,    lastModified: now, changeFrequency: "monthly", priority: 0.80 },
+];
+
+// ─── Service pages (primary commercial intent) ────────────────────────────────
+const servicePages: SitemapEntry[] = [
+  "house-removals",
+  "man-and-van",
+  "house-clearance",
+  "furniture-removals",
+  "storage-collection",
+].map((slug) => ({
+  url: `${SITE_URL}/${slug}`,
+  lastModified: now,
+  changeFrequency: "monthly" as ChangeFreq,
+  priority: 0.90,
+}));
+
+// ─── Local area pages (local SEO) ─────────────────────────────────────────────
+const areaPages: SitemapEntry[] = [
+  "warrington-removals",
+  "wigan-removals",
+  "widnes-removals",
+  "st-helens-removals",
+  "northwich-removals",
+].map((slug) => ({
+  url: `${SITE_URL}/${slug}`,
+  lastModified: now,
+  changeFrequency: "monthly" as ChangeFreq,
+  priority: 0.85,
+}));
+
+// ─── Blog / informational pages ───────────────────────────────────────────────
+const blogIndex: SitemapEntry[] = [
+  {
+    url: `${SITE_URL}/blog`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.65,
+  },
+];
+
+const blogPosts: SitemapEntry[] = [
+  { slug: "moving-house-checklist",          date: "2024-12-01" },
+  { slug: "how-much-do-removals-cost",       date: "2024-11-20" },
+  { slug: "packing-tips-house-move",         date: "2024-11-05" },
+  { slug: "man-and-van-vs-removal-company",  date: "2024-10-18" },
+  { slug: "house-clearance-guide",           date: "2024-10-01" },
+  { slug: "moving-with-children-tips",       date: "2024-09-15" },
+].map(({ slug, date }) => ({
+  url: `${SITE_URL}/blog/${slug}`,
+  lastModified: new Date(date).toISOString(),
+  changeFrequency: "yearly" as ChangeFreq,
+  priority: 0.55,
+}));
+
+// ─── Legal pages ──────────────────────────────────────────────────────────────
+const legalPages: SitemapEntry[] = [
+  { url: `${SITE_URL}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.30 },
+  { url: `${SITE_URL}/terms`,          lastModified: now, changeFrequency: "yearly", priority: 0.30 },
+];
+
+// ─── Export ───────────────────────────────────────────────────────────────────
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    ...homePage,
+    ...corePage,
+    ...servicePages,
+    ...areaPages,
+    ...blogIndex,
+    ...blogPosts,
+    ...legalPages,
+  ];
 }

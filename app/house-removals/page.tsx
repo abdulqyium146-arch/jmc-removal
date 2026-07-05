@@ -6,7 +6,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import { generatePageMetadata } from "@/lib/metadata";
-import { faqSchema, serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { faqSchema, serviceSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -60,9 +60,10 @@ const breadcrumbs = [{ label: "House Removals", href: "/house-removals" }];
 export default function HouseRemovalsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "House Removals Warrington | JMC Removals", description: "Professional house removals in Warrington. Fully insured, family-owned removal company. Free quotes.", url: `${SITE_URL}/house-removals`, breadcrumb: [{ name: "Home", url: SITE_URL }, { name: "House Removals", url: `${SITE_URL}/house-removals` }] })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "House Removals", description: "Professional house removal service in Warrington, Cheshire and the North West. Full domestic removal service including loading, transport and unloading.", url: `${SITE_URL}/house-removals`, areaServed: "Warrington" })) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "House Removals", url: `${SITE_URL}/house-removals` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "House Removals Warrington", description: "Professional house removal service in Warrington, Cheshire and the North West. Full domestic removal service including loading, transport and unloading.", url: `${SITE_URL}/house-removals`, areaServed: "Warrington", serviceType: "House Removal" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "House Removals Warrington", url: `${SITE_URL}/house-removals` }])) }} />
 
       <ServicePageHero
         badge="House Removals Warrington"

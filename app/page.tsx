@@ -15,8 +15,19 @@ import { SITE_URL } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "JMC Removals | House Removals Warrington | Man & Van Cheshire",
   description:
-    "JMC Removals — trusted family-owned removal company in Warrington, Cheshire. Professional house removals, man & van, house clearance & furniture removals. Free quotes. Call 01925 812700.",
-  alternates: { canonical: SITE_URL },
+    "JMC Removals — family-owned removal company based in Warrington, Cheshire. Trusted house removals, man & van, house clearance & furniture removals across Warrington, Wigan, Widnes & St Helens. Free no-obligation quotes. Call 01925 812700.",
+  alternates: {
+    canonical: SITE_URL,
+    languages: { "en-GB": SITE_URL, "x-default": SITE_URL },
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: "JMC Removals | House Removals Warrington",
+    description:
+      "Family-owned removal company in Warrington. Professional house removals, man & van & house clearance across Cheshire & the North West. Free quotes — call 01925 812700.",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "JMC Removals — House Removals Warrington" }],
+  },
 };
 
 const howToSteps = [
