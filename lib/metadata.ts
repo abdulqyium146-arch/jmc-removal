@@ -132,7 +132,7 @@ export const defaultMetadata: Metadata = {
 
   // Site verification tokens
   verification: {
-    google: "REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_TOKEN",
+    google: "ZJYSU4vlL9-0ILM4ItyGGnph_GxTUOfcE3cnM02OBwQ",
     // bing: "REPLACE_WITH_BING_WEBMASTER_TOKEN",
     // yandex: "REPLACE_WITH_YANDEX_TOKEN",
   },
