@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import ContactForm from "@/components/sections/ContactForm";
@@ -8,7 +8,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = generatePageMetadata({
   title: "Contact JMC Removals | Free Removal Quote Warrington",
   description:
-    "Contact JMC Removals for a free, no-obligation removal quote. Call 01925 812700 or fill in our online form. Serving Warrington, Wigan, Widnes, St Helens and the North West.",
+    "Contact JMC Removals for a free, no-obligation removal quote. Call +44 7438 447286 or fill in our online form. Serving Warrington, Wigan, Widnes, St Helens and the North West.",
   path: "/contact",
 });
 

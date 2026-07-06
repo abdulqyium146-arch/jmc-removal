@@ -9,8 +9,8 @@ export function cn(...inputs: ClassValue[]) {
 export const SITE_URL = "https://jmcremovals.co.uk";
 export const SITE_NAME = "JMC Removals";
 export const BUSINESS_NAME = "JMC Removals";
-export const BUSINESS_PHONE = "01925 812700";
-export const BUSINESS_PHONE_RAW = "01925812700";
+export const BUSINESS_PHONE = "+44 7438 447286";
+export const BUSINESS_PHONE_RAW = "+447438447286";
 export const BUSINESS_EMAIL = "info@jmcremovals.co.uk";
 export const BUSINESS_FOUNDED = "2010";
 

@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import LocalAreaPage from "@/components/sections/LocalAreaPage";
 import { generatePageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Removals Wigan | House Removals Wigan | JMC Removals",
   description:
-    "Professional removal company serving Wigan and the surrounding area. JMC Removals provides house removals, man and van, house clearance and more across Wigan. Free quotes — call 01925 812700.",
+    "Professional removal company serving Wigan and the surrounding area. JMC Removals provides house removals, man and van, house clearance and more across Wigan. Free quotes — call +44 7438 447286.",
   path: "/wigan-removals",
   keywords: [
     "removals Wigan",

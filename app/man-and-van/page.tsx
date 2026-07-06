@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
@@ -11,7 +11,7 @@ import { SITE_URL } from "@/lib/utils";
 export const metadata: Metadata = generatePageMetadata({
   title: "Man and Van Warrington | Affordable Man & Van Hire | JMC Removals",
   description:
-    "Affordable man and van hire in Warrington. JMC Removals provides a reliable, friendly man and van service for smaller moves, single items, student moves and more. Call 01925 812700 for a free quote.",
+    "Affordable man and van hire in Warrington. JMC Removals provides a reliable, friendly man and van service for smaller moves, single items, student moves and more. Call +44 7438 447286 for a free quote.",
   path: "/man-and-van",
   keywords: [
     "man and van Warrington",
@@ -123,8 +123,8 @@ export default function ManAndVanPage() {
                   <p className="text-sm text-gray-600 mb-4">
                     Call us for a fast, free quote on our man and van service.
                   </p>
-                  <a href="tel:01925812700" className="btn-primary w-full justify-center mb-3">
-                    01925 812700
+                  <a href="tel:+447438447286" className="btn-primary w-full justify-center mb-3">
+                    +44 7438 447286
                   </a>
                   <a href="/contact" className="btn-secondary w-full justify-center text-sm">
                     Get Online Quote

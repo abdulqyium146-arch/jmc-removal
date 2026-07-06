@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
@@ -11,7 +11,7 @@ import { SITE_URL } from "@/lib/utils";
 export const metadata: Metadata = generatePageMetadata({
   title: "House Clearance Warrington | Professional Property Clearance | JMC Removals",
   description:
-    "Professional house clearance in Warrington and surrounding areas. JMC Removals provides full and partial property clearances — including probate, landlord and estate clearances. Respectful and efficient. Free quotes — call 01925 812700.",
+    "Professional house clearance in Warrington and surrounding areas. JMC Removals provides full and partial property clearances — including probate, landlord and estate clearances. Respectful and efficient. Free quotes — call +44 7438 447286.",
   path: "/house-clearance",
   keywords: [
     "house clearance Warrington",
@@ -121,8 +121,8 @@ export default function HouseClearancePage() {
                   <p className="text-sm text-gray-600 mb-4">
                     Get a free, no-obligation house clearance quote today.
                   </p>
-                  <a href="tel:01925812700" className="btn-primary w-full justify-center mb-3">
-                    01925 812700
+                  <a href="tel:+447438447286" className="btn-primary w-full justify-center mb-3">
+                    +44 7438 447286
                   </a>
                   <a href="/contact" className="btn-secondary w-full justify-center text-sm">
                     Request Online Quote

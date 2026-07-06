@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -123,8 +123,8 @@ export default function CoverageAreas() {
           </div>
           <p className="text-xs text-gray-500 mt-5">
             Not sure if we cover your area? Call us on{" "}
-            <a href="tel:01925812700" className="font-semibold text-brand-600 hover:underline">
-              01925 812700
+            <a href="tel:+447438447286" className="font-semibold text-brand-600 hover:underline">
+              +44 7438 447286
             </a>{" "}
             and we&apos;ll be happy to help.
           </p>

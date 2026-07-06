@@ -1,4 +1,4 @@
-export const homeFaqs = [
+﻿export const homeFaqs = [
   {
     question: "How much do house removals cost in Warrington?",
     answer:
@@ -37,6 +37,6 @@ export const homeFaqs = [
   {
     question: "How do I get a quote from JMC Removals?",
     answer:
-      "Getting a quote is easy. Call us on 01925 812700, fill in our online quote form, or email us. We'll ask a few simple questions about your move and provide a clear, fixed price with no obligation. For larger moves, we can arrange a free home survey.",
+      "Getting a quote is easy. Call us on +44 7438 447286, fill in our online quote form, or email us. We'll ask a few simple questions about your move and provide a clear, fixed price with no obligation. For larger moves, we can arrange a free home survey.",
   },
 ];

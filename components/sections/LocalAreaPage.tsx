@@ -1,4 +1,4 @@
-import ServicePageHero from "@/components/sections/ServicePageHero";
+﻿import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
@@ -96,7 +96,7 @@ export default function LocalAreaPage({ area }: LocalAreaPageProps) {
                 <p className="text-sm text-gray-600 mb-4">
                   Call us or fill in our online form for a free, no-obligation removal quote in {area.name}.
                 </p>
-                <a href="tel:01925812700" className="btn-primary w-full justify-center mb-3">01925 812700</a>
+                <a href="tel:+447438447286" className="btn-primary w-full justify-center mb-3">+44 7438 447286</a>
                 <a href="/contact" className="btn-secondary w-full justify-center text-sm">Online Quote Form</a>
               </div>
 

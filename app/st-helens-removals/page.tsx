@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import LocalAreaPage from "@/components/sections/LocalAreaPage";
 import { generatePageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Removals St Helens | House Removals St Helens | JMC Removals",
   description:
-    "Professional removal company serving St Helens and Merseyside. JMC Removals provides house removals, man and van hire and house clearance services across St Helens. Free quotes — call 01925 812700.",
+    "Professional removal company serving St Helens and Merseyside. JMC Removals provides house removals, man and van hire and house clearance services across St Helens. Free quotes — call +44 7438 447286.",
   path: "/st-helens-removals",
   keywords: [
     "removals St Helens",

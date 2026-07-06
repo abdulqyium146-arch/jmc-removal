@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import { generatePageMetadata } from "@/lib/metadata";
 import ServicePageHero from "@/components/sections/ServicePageHero";
@@ -78,7 +78,7 @@ export default function AboutPage() {
                   <div className="space-y-3 text-sm">
                     <div>
                       <span className="font-semibold text-gray-700">Phone:</span>
-                      <a href="tel:01925812700" className="text-brand-600 ml-2 hover:underline">01925 812700</a>
+                      <a href="tel:+447438447286" className="text-brand-600 ml-2 hover:underline">+44 7438 447286</a>
                     </div>
                     <div>
                       <span className="font-semibold text-gray-700">Email:</span>

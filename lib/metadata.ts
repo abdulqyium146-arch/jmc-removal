@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import {
   SITE_URL,
   SITE_NAME,
@@ -28,7 +28,7 @@ export const defaultMetadata: Metadata = {
 
   // Primary meta description (155 chars target)
   description:
-    "JMC Removals — family-owned removal company in Warrington, Cheshire. Trusted house removals, man & van, house clearance & furniture removals across Warrington, Wigan, Widnes & St Helens. Free no-obligation quotes. Call 01925 812700.",
+    "JMC Removals — family-owned removal company in Warrington, Cheshire. Trusted house removals, man & van, house clearance & furniture removals across Warrington, Wigan, Widnes & St Helens. Free no-obligation quotes. Call +44 7438 447286.",
 
   // Core keywords (supplementary signal — not a primary ranking factor)
   keywords: [

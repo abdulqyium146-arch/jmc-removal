@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Phone, ClipboardList, CalendarCheck, Truck, Home } from "lucide-react";
@@ -10,7 +10,7 @@ const steps = [
     step: "01",
     title: "Get in Touch",
     description:
-      "Call us on 01925 812700 or fill in our online form. Tell us about your move — property size, date, distance and any special items.",
+      "Call us on +44 7438 447286 or fill in our online form. Tell us about your move — property size, date, distance and any special items.",
   },
   {
     icon: ClipboardList,

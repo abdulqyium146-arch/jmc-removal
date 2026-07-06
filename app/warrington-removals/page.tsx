@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import LocalAreaPage from "@/components/sections/LocalAreaPage";
 import { generatePageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Removals Warrington | House Removals Warrington | JMC Removals",
   description:
-    "JMC Removals — the trusted removal company in Warrington, Cheshire. Professional house removals, man and van, house clearance and furniture removals. Based in Warrington. Free quotes — call 01925 812700.",
+    "JMC Removals — the trusted removal company in Warrington, Cheshire. Professional house removals, man and van, house clearance and furniture removals. Based in Warrington. Free quotes — call +44 7438 447286.",
   path: "/warrington-removals",
   keywords: [
     "removals Warrington",

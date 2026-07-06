@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Services from "@/components/sections/Services";
@@ -13,7 +13,7 @@ import { SITE_URL } from "@/lib/utils";
 export const metadata: Metadata = generatePageMetadata({
   title: "House Removals Warrington | Professional Domestic Removals | JMC Removals",
   description:
-    "Professional house removals in Warrington and across the North West. JMC Removals provides stress-free domestic removal services for all property sizes. Fully insured, family-owned. Free quotes — call 01925 812700.",
+    "Professional house removals in Warrington and across the North West. JMC Removals provides stress-free domestic removal services for all property sizes. Fully insured, family-owned. Free quotes — call +44 7438 447286.",
   path: "/house-removals",
   keywords: [
     "house removals Warrington",
@@ -133,8 +133,8 @@ export default function HouseRemovalsPage() {
                   <p className="text-sm text-gray-600 mb-4">
                     Call us or fill in our online form for a free, no-obligation house removal quote.
                   </p>
-                  <a href="tel:01925812700" className="btn-primary w-full justify-center mb-3">
-                    01925 812700
+                  <a href="tel:+447438447286" className="btn-primary w-full justify-center mb-3">
+                    +44 7438 447286
                   </a>
                   <a href="/contact" className="btn-secondary w-full justify-center text-sm">
                     Online Quote Form

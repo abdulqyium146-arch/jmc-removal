@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
@@ -122,7 +122,7 @@ export default function FurnitureRemovalsPage() {
                 <div className="rounded-2xl border border-brand-100 bg-brand-50 p-6">
                   <h3 className="text-base font-bold text-gray-900 mb-4">Furniture Removal Quote</h3>
                   <p className="text-sm text-gray-600 mb-4">Get a free quote for your furniture removal today.</p>
-                  <a href="tel:01925812700" className="btn-primary w-full justify-center mb-3">01925 812700</a>
+                  <a href="tel:+447438447286" className="btn-primary w-full justify-center mb-3">+44 7438 447286</a>
                   <a href="/contact" className="btn-secondary w-full justify-center text-sm">Online Quote Form</a>
                 </div>
                 <div className="rounded-2xl border border-orange-100 bg-orange-50 p-5">

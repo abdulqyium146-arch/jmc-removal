@@ -1,4 +1,4 @@
-import {
+﻿import {
   SITE_URL,
   BUSINESS_NAME,
   BUSINESS_PHONE,
@@ -308,7 +308,7 @@ export const serviceSchema = (service: {
     priceSpecification: {
       "@type": "PriceSpecification",
       priceCurrency: "GBP",
-      description: "Free no-obligation quote. Call 01925 812700.",
+      description: "Free no-obligation quote. Call +44 7438 447286.",
     },
   },
 });

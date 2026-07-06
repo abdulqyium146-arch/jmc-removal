@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -15,7 +15,7 @@ import { SITE_URL } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "JMC Removals | House Removals Warrington | Man & Van Cheshire",
   description:
-    "JMC Removals — family-owned removal company based in Warrington, Cheshire. Trusted house removals, man & van, house clearance & furniture removals across Warrington, Wigan, Widnes & St Helens. Free no-obligation quotes. Call 01925 812700.",
+    "JMC Removals — family-owned removal company based in Warrington, Cheshire. Trusted house removals, man & van, house clearance & furniture removals across Warrington, Wigan, Widnes & St Helens. Free no-obligation quotes. Call +44 7438 447286.",
   alternates: {
     canonical: SITE_URL,
     languages: { "en-GB": SITE_URL, "x-default": SITE_URL },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "JMC Removals | House Removals Warrington",
     description:
-      "Family-owned removal company in Warrington. Professional house removals, man & van & house clearance across Cheshire & the North West. Free quotes — call 01925 812700.",
+      "Family-owned removal company in Warrington. Professional house removals, man & van & house clearance across Cheshire & the North West. Free quotes — call +44 7438 447286.",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "JMC Removals — House Removals Warrington" }],
   },
 };
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const howToSteps = [
   {
     name: "Contact JMC Removals",
-    text: "Call 01925 812700 or complete our online quote form with details of your move.",
+    text: "Call +44 7438 447286 or complete our online quote form with details of your move.",
   },
   {
     name: "Receive Your Free Quote",

@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import LocalAreaPage from "@/components/sections/LocalAreaPage";
 import { generatePageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Removals Widnes | House Removals Widnes | JMC Removals",
   description:
-    "Trusted removal company serving Widnes and surrounding Cheshire areas. JMC Removals offers house removals, man and van hire and house clearance services across Widnes. Free quotes — call 01925 812700.",
+    "Trusted removal company serving Widnes and surrounding Cheshire areas. JMC Removals offers house removals, man and van hire and house clearance services across Widnes. Free quotes — call +44 7438 447286.",
   path: "/widnes-removals",
   keywords: [
     "removals Widnes",

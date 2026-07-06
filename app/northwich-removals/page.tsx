@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import LocalAreaPage from "@/components/sections/LocalAreaPage";
 import { generatePageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Removals Northwich | House Removals Northwich | JMC Removals",
   description:
-    "Professional removal company serving Northwich and Mid Cheshire. JMC Removals provides house removals, man and van hire and house clearance across Northwich. Free quotes — call 01925 812700.",
+    "Professional removal company serving Northwich and Mid Cheshire. JMC Removals provides house removals, man and van hire and house clearance across Northwich. Free quotes — call +44 7438 447286.",
   path: "/northwich-removals",
   keywords: [
     "removals Northwich",
