@@ -40,10 +40,17 @@ const areas = [
     county: "Cheshire",
     popular: false,
   },
+  {
+    name: "Runcorn",
+    slug: "runcorn-removals",
+    description: "Fast removal service — just 10 minutes from our Warrington depot.",
+    county: "Cheshire",
+    popular: false,
+  },
 ];
 
 const additionalAreas = [
-  "Runcorn", "Leigh", "Salford", "Manchester", "Chester", "Crewe",
+  "Leigh", "Salford", "Manchester", "Chester", "Crewe",
   "Altrincham", "Sale", "Stretford", "Eccles", "Newton-le-Willows", "Haydock",
 ];
 
@@ -66,7 +73,7 @@ export default function CoverageAreas() {
         </div>
 
         {/* Main areas */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
           {areas.map((area, index) => (
             <motion.div
               key={area.slug}

@@ -49,6 +49,7 @@ const areaPages: SitemapEntry[] = [
   "widnes-removals",
   "st-helens-removals",
   "northwich-removals",
+  "runcorn-removals",
 ].map((slug) => ({
   url: `${SITE_URL}/${slug}`,
   lastModified: now,

@@ -35,6 +35,7 @@ const areaSlugMap: Record<string, string> = {
   "Widnes": "/widnes-removals",
   "St Helens": "/st-helens-removals",
   "Northwich": "/northwich-removals",
+  "Runcorn": "/runcorn-removals",
 };
 
 const blogLinks = [
