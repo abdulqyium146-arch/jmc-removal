@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
@@ -103,8 +104,27 @@ export default function ManAndVanPage() {
 
                 <h3>Areas Covered</h3>
                 <p>
-                  Our man and van service covers Warrington, Wigan, Widnes, St Helens, Northwich and all surrounding areas of Cheshire, Merseyside and Greater Manchester.
+                  Our man and van service covers <Link href="/warrington-removals" className="text-brand-600 hover:underline">Warrington</Link>, <Link href="/wigan-removals" className="text-brand-600 hover:underline">Wigan</Link>, <Link href="/widnes-removals" className="text-brand-600 hover:underline">Widnes</Link>, <Link href="/st-helens-removals" className="text-brand-600 hover:underline">St Helens</Link>, <Link href="/northwich-removals" className="text-brand-600 hover:underline">Northwich</Link> and all surrounding areas of Cheshire, Merseyside and Greater Manchester.
                 </p>
+
+                <h3>Need More Than a Man & Van?</h3>
+                <p>
+                  If your move is larger than expected, our <Link href="/house-removals" className="text-brand-600 hover:underline">full house removal service</Link> may be more appropriate. Not sure which is right for you? Read our guide: <Link href="/blog/man-and-van-vs-removal-company" className="text-brand-600 hover:underline">Man & Van vs Removal Company</Link>.
+                </p>
+
+                <div className="not-prose grid sm:grid-cols-2 gap-3 mt-4">
+                  {[
+                    { label: "House Removals", href: "/house-removals", desc: "Full service for larger moves" },
+                    { label: "Furniture Removals", href: "/furniture-removals", desc: "Single items & specialist pieces" },
+                    { label: "Storage Collection", href: "/storage-collection", desc: "Collect from storage facilities" },
+                    { label: "How Much Will It Cost?", href: "/blog/how-much-do-removals-cost", desc: "2025 price guide" },
+                  ].map((s) => (
+                    <Link key={s.href} href={s.href} className="block rounded-xl border border-gray-200 bg-gray-50 p-3 hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                      <p className="text-sm font-semibold text-gray-900 group-hover:text-brand-700">{s.label}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.desc}</p>
+                    </Link>
+                  ))}
+                </div>
               </div>
 
               <div className="space-y-5">

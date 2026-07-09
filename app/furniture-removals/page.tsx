@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
@@ -106,6 +107,25 @@ export default function FurnitureRemovalsPage() {
                 <p>
                   We treat antique, valuable and fragile furniture with exceptional care. Our team uses specialist packing materials including custom blankets, foam wrapping and tailored crating where necessary. We understand the irreplaceable nature of valuable pieces.
                 </p>
+
+                <h3>Areas We Cover</h3>
+                <p>
+                  Our furniture removal service covers <Link href="/warrington-removals" className="text-brand-600 hover:underline">Warrington</Link>, <Link href="/wigan-removals" className="text-brand-600 hover:underline">Wigan</Link>, <Link href="/widnes-removals" className="text-brand-600 hover:underline">Widnes</Link>, <Link href="/st-helens-removals" className="text-brand-600 hover:underline">St Helens</Link>, <Link href="/northwich-removals" className="text-brand-600 hover:underline">Northwich</Link> and surrounding areas. We also carry out longer-distance furniture transport — just enquire.
+                </p>
+
+                <div className="not-prose grid sm:grid-cols-2 gap-3 mt-4">
+                  {[
+                    { label: "House Removals", href: "/house-removals", desc: "Full property moves" },
+                    { label: "House Clearance", href: "/house-clearance", desc: "Clear unwanted furniture" },
+                    { label: "Man & Van", href: "/man-and-van", desc: "Single item transport" },
+                    { label: "Packing Tips", href: "/blog/packing-tips-house-move", desc: "Protect your furniture" },
+                  ].map((s) => (
+                    <Link key={s.href} href={s.href} className="block rounded-xl border border-gray-200 bg-gray-50 p-3 hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                      <p className="text-sm font-semibold text-gray-900 group-hover:text-brand-700">{s.label}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.desc}</p>
+                    </Link>
+                  ))}
+                </div>
               </div>
 
               <div className="space-y-5">

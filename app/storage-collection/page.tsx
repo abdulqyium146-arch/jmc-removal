@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
@@ -84,18 +85,32 @@ export default function StorageCollectionPage() {
 
                 <h3>Storage Facilities We Cover</h3>
                 <p>
-                  We collect from storage facilities across Warrington, Cheshire, Merseyside and Greater Manchester. Whether your belongings are stored locally in Warrington or further afield in Wigan, Widnes or St Helens, we can arrange collection.
+                  We collect from storage facilities across <Link href="/warrington-removals" className="text-brand-600 hover:underline">Warrington</Link>, Cheshire, Merseyside and Greater Manchester. Whether your belongings are stored locally in Warrington or further afield in <Link href="/wigan-removals" className="text-brand-600 hover:underline">Wigan</Link>, <Link href="/widnes-removals" className="text-brand-600 hover:underline">Widnes</Link> or <Link href="/st-helens-removals" className="text-brand-600 hover:underline">St Helens</Link>, we can arrange collection.
                 </p>
 
                 <h3>Combined Storage & House Removal Service</h3>
                 <p>
-                  If you have a house removal and need items collected from storage on the same day, we can coordinate both services. This avoids the need to make multiple trips and ensures your entire move is managed efficiently by a single, trusted team.
+                  If you have a <Link href="/house-removals" className="text-brand-600 hover:underline">house removal</Link> and need items collected from storage on the same day, we can coordinate both services. This avoids the need to make multiple trips and ensures your entire move is managed efficiently by a single, trusted team.
                 </p>
 
                 <h3>Putting Belongings into Storage</h3>
                 <p>
-                  We also offer the reverse service — transporting your belongings to a storage facility. Whether you need to clear a property quickly or are in between homes, we can collect from your property and deliver to your chosen storage unit.
+                  We also offer the reverse service — transporting your belongings to a storage facility. Whether you need to clear a property quickly or are in between homes, we can collect from your property and deliver to your chosen storage unit. For larger property clearances, see our <Link href="/house-clearance" className="text-brand-600 hover:underline">house clearance service</Link>.
                 </p>
+
+                <div className="not-prose grid sm:grid-cols-2 gap-3 mt-4">
+                  {[
+                    { label: "House Removals", href: "/house-removals", desc: "Full property moves" },
+                    { label: "Furniture Removals", href: "/furniture-removals", desc: "Move individual items" },
+                    { label: "Man & Van", href: "/man-and-van", desc: "Smaller collections" },
+                    { label: "Moving House Checklist", href: "/blog/moving-house-checklist", desc: "Plan your move" },
+                  ].map((s) => (
+                    <Link key={s.href} href={s.href} className="block rounded-xl border border-gray-200 bg-gray-50 p-3 hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                      <p className="text-sm font-semibold text-gray-900 group-hover:text-brand-700">{s.label}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.desc}</p>
+                    </Link>
+                  ))}
+                </div>
               </div>
 
               <div className="space-y-5">

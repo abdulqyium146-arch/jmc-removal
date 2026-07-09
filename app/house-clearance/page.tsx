@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
@@ -101,8 +102,27 @@ export default function HouseClearancePage() {
 
                 <h3>Responsible Disposal</h3>
                 <p>
-                  JMC Removals is committed to environmentally responsible disposal. We donate suitable furniture and household items to local charities. All waste is taken to licensed facilities and we can provide waste transfer documentation if required. We are fully licensed waste carriers.
+                  JMC Removals is committed to environmentally responsible disposal. We donate suitable <Link href="/furniture-removals" className="text-brand-600 hover:underline">furniture</Link> and household items to local charities. All waste is taken to licensed facilities and we can provide waste transfer documentation if required. We are fully licensed waste carriers.
                 </p>
+
+                <h3>Areas We Cover for House Clearance</h3>
+                <p>
+                  We provide house clearance services across <Link href="/warrington-removals" className="text-brand-600 hover:underline">Warrington</Link>, <Link href="/wigan-removals" className="text-brand-600 hover:underline">Wigan</Link>, <Link href="/widnes-removals" className="text-brand-600 hover:underline">Widnes</Link>, <Link href="/st-helens-removals" className="text-brand-600 hover:underline">St Helens</Link>, <Link href="/northwich-removals" className="text-brand-600 hover:underline">Northwich</Link> and all surrounding areas.
+                </p>
+
+                <div className="not-prose grid sm:grid-cols-2 gap-3 mt-4">
+                  {[
+                    { label: "House Removals", href: "/house-removals", desc: "Move after your clearance" },
+                    { label: "Furniture Removals", href: "/furniture-removals", desc: "Specialist furniture handling" },
+                    { label: "Man & Van", href: "/man-and-van", desc: "Smaller clearance jobs" },
+                    { label: "House Clearance Guide", href: "/blog/house-clearance-guide", desc: "What to expect" },
+                  ].map((s) => (
+                    <Link key={s.href} href={s.href} className="block rounded-xl border border-gray-200 bg-gray-50 p-3 hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                      <p className="text-sm font-semibold text-gray-900 group-hover:text-brand-700">{s.label}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.desc}</p>
+                    </Link>
+                  ))}
+                </div>
               </div>
 
               <div className="space-y-5">

@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import Services from "@/components/sections/Services";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -106,13 +107,35 @@ export default function HouseRemovalsPage() {
 
                 <h3>Part Load Removals</h3>
                 <p id="part-load">
-                  If you&apos;re moving fewer items or working to a budget, our part-load removal service allows you to share van space with another customer&apos;s goods, significantly reducing your moving costs. This is ideal for smaller properties or moves where you don&apos;t need an entire van.
+                  If you&apos;re moving fewer items or working to a budget, our part-load removal service allows you to share van space with another customer&apos;s goods, significantly reducing your moving costs. This is ideal for smaller properties or moves where you don&apos;t need an entire van. For even smaller moves, our <Link href="/man-and-van" className="text-brand-600 hover:underline">man and van service</Link> may be the right option.
                 </p>
 
                 <h3>Domestic Removals Across the North West</h3>
                 <p>
-                  Our domestic removal service covers Warrington and the wider North West including Wigan, Widnes, St Helens, Northwich, Cheshire, Merseyside and Greater Manchester. For longer-distance moves across the UK, we can provide a competitive quote — just ask.
+                  Our domestic removal service covers <Link href="/warrington-removals" className="text-brand-600 hover:underline">Warrington</Link>, <Link href="/wigan-removals" className="text-brand-600 hover:underline">Wigan</Link>, <Link href="/widnes-removals" className="text-brand-600 hover:underline">Widnes</Link>, <Link href="/st-helens-removals" className="text-brand-600 hover:underline">St Helens</Link>, <Link href="/northwich-removals" className="text-brand-600 hover:underline">Northwich</Link>, Cheshire, Merseyside and Greater Manchester. For longer-distance moves across the UK, we can provide a competitive quote — just ask.
                 </p>
+
+                <h3>Related Services</h3>
+                <div className="not-prose grid sm:grid-cols-2 gap-3 mt-3">
+                  {[
+                    { label: "Man & Van Warrington", href: "/man-and-van", desc: "Smaller moves & single items" },
+                    { label: "House Clearance", href: "/house-clearance", desc: "Clear before or after your move" },
+                    { label: "Furniture Removals", href: "/furniture-removals", desc: "Specialist item transport" },
+                    { label: "Storage Collection", href: "/storage-collection", desc: "Pick up from storage facilities" },
+                  ].map((s) => (
+                    <Link key={s.href} href={s.href} className="block rounded-xl border border-gray-200 bg-gray-50 p-3 hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                      <p className="text-sm font-semibold text-gray-900 group-hover:text-brand-700">{s.label}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{s.desc}</p>
+                    </Link>
+                  ))}
+                </div>
+
+                <h3>Helpful Moving Guides</h3>
+                <ul>
+                  <li><Link href="/blog/moving-house-checklist" className="text-brand-600 hover:underline">The Ultimate Moving House Checklist</Link> — a week-by-week guide for your move</li>
+                  <li><Link href="/blog/how-much-do-removals-cost" className="text-brand-600 hover:underline">How Much Do Removals Cost in Warrington?</Link> — 2025 price guide</li>
+                  <li><Link href="/blog/packing-tips-house-move" className="text-brand-600 hover:underline">Expert Packing Tips</Link> — protect your belongings during transit</li>
+                </ul>
               </div>
 
               {/* Sidebar */}

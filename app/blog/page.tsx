@@ -86,6 +86,9 @@ export default function BlogPage() {
 
       <section className="section bg-white">
         <div className="container">
+          <p className="text-gray-600 max-w-3xl mx-auto text-center mb-10 text-base leading-relaxed">
+            Planning a move? Browse our guides on <Link href="/house-removals">house removals in Warrington</Link>, <Link href="/man-and-van">man and van hire</Link>, <Link href="/house-clearance">house clearance</Link> and more — or <Link href="/contact">get a free quote</Link> from our team today.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {posts.map((post) => (
               <article key={post.slug} className="group">

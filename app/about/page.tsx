@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { generatePageMetadata } from "@/lib/metadata";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -54,9 +55,18 @@ export default function AboutPage() {
                   <li><strong>Community</strong> — proud to serve Warrington and the North West</li>
                 </ul>
 
+                <h2>Our Services</h2>
+                <ul>
+                  <li><Link href="/house-removals" className="text-brand-600 hover:underline">House removals</Link> — full domestic removal service for all property sizes</li>
+                  <li><Link href="/man-and-van" className="text-brand-600 hover:underline">Man and van hire</Link> — affordable option for smaller moves and single items</li>
+                  <li><Link href="/house-clearance" className="text-brand-600 hover:underline">House clearance</Link> — full and partial clearances, including probate and landlord clearances</li>
+                  <li><Link href="/furniture-removals" className="text-brand-600 hover:underline">Furniture removals</Link> — specialist handling for antiques, pianos and large items</li>
+                  <li><Link href="/storage-collection" className="text-brand-600 hover:underline">Storage collection</Link> — pickup and delivery to and from storage facilities</li>
+                </ul>
+
                 <h2>Our Coverage Area</h2>
                 <p>
-                  From our Warrington base, we cover a wide area including all of Cheshire, Merseyside and Greater Manchester. Key areas include Wigan, Widnes, St Helens, Northwich, Runcorn and the wider region. We can also assist with UK-wide removals — just ask.
+                  From our <Link href="/warrington-removals" className="text-brand-600 hover:underline">Warrington</Link> base, we cover a wide area including all of Cheshire, Merseyside and Greater Manchester. Key areas include <Link href="/wigan-removals" className="text-brand-600 hover:underline">Wigan</Link>, <Link href="/widnes-removals" className="text-brand-600 hover:underline">Widnes</Link>, <Link href="/st-helens-removals" className="text-brand-600 hover:underline">St Helens</Link>, <Link href="/northwich-removals" className="text-brand-600 hover:underline">Northwich</Link>, Runcorn and the wider region. We can also assist with UK-wide removals — just ask.
                 </p>
               </div>
 

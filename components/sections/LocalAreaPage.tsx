@@ -1,11 +1,11 @@
-﻿import ServicePageHero from "@/components/sections/ServicePageHero";
+import ServicePageHero from "@/components/sections/ServicePageHero";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import { faqSchema, serviceSchema, breadcrumbSchema, localAreaSchema, webPageSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/utils";
 import Link from "next/link";
-import { CheckCircle, MapPin } from "lucide-react";
+import { CheckCircle, MapPin, BookOpen } from "lucide-react";
 
 interface LocalAreaPageProps {
   area: {
@@ -26,6 +26,22 @@ const allServices = [
   { label: "House Clearance", href: "/house-clearance" },
   { label: "Furniture Removals", href: "/furniture-removals" },
   { label: "Storage Collection", href: "/storage-collection" },
+];
+
+// Areas that have dedicated location pages — used to render hyperlinks
+const areaSlugMap: Record<string, string> = {
+  "Warrington": "/warrington-removals",
+  "Wigan": "/wigan-removals",
+  "Widnes": "/widnes-removals",
+  "St Helens": "/st-helens-removals",
+  "Northwich": "/northwich-removals",
+};
+
+const blogLinks = [
+  { label: "Moving House Checklist", href: "/blog/moving-house-checklist" },
+  { label: "How Much Do Removals Cost?", href: "/blog/how-much-do-removals-cost" },
+  { label: "Expert Packing Tips", href: "/blog/packing-tips-house-move" },
+  { label: "Man & Van vs Removal Company", href: "/blog/man-and-van-vs-removal-company" },
 ];
 
 export default function LocalAreaPage({ area }: LocalAreaPageProps) {
@@ -59,15 +75,54 @@ export default function LocalAreaPage({ area }: LocalAreaPageProps) {
 
               <h3>Our Services in {area.name}</h3>
               <ul>
-                {area.services.map((s) => (
-                  <li key={s}>{s}</li>
-                ))}
+                <li>
+                  <Link href="/house-removals" className="text-brand-600 hover:underline">
+                    House removals
+                  </Link>{" "}
+                  — full domestic removal service in {area.name}
+                </li>
+                <li>
+                  <Link href="/man-and-van" className="text-brand-600 hover:underline">
+                    Man and van hire
+                  </Link>{" "}
+                  — affordable option for smaller moves in {area.name}
+                </li>
+                <li>
+                  <Link href="/house-clearance" className="text-brand-600 hover:underline">
+                    House clearance
+                  </Link>{" "}
+                  — full and partial property clearances in {area.name}
+                </li>
+                <li>
+                  <Link href="/furniture-removals" className="text-brand-600 hover:underline">
+                    Furniture removals
+                  </Link>{" "}
+                  — single items or full room moves
+                </li>
+                <li>
+                  <Link href="/storage-collection" className="text-brand-600 hover:underline">
+                    Storage collection
+                  </Link>{" "}
+                  — pickup and delivery from storage facilities
+                </li>
               </ul>
 
               <h3>Nearby Areas We Also Cover</h3>
               <p>
                 As well as {area.name}, we regularly provide removal services to and from:{" "}
-                {area.nearbyAreas.join(", ")}. We cover the entire North West region — if you&apos;re unsure whether we cover your area, just give us a call.
+                {area.nearbyAreas.map((nearbyArea, i) => (
+                  <span key={nearbyArea}>
+                    {i > 0 && ", "}
+                    {areaSlugMap[nearbyArea] ? (
+                      <Link href={areaSlugMap[nearbyArea]} className="text-brand-600 hover:underline">
+                        {nearbyArea}
+                      </Link>
+                    ) : (
+                      nearbyArea
+                    )}
+                  </span>
+                ))}
+                . We cover the entire North West region — if you&apos;re unsure whether we cover your area, just give us a call.
               </p>
 
               <h3>Why Choose JMC Removals in {area.name}?</h3>
@@ -97,7 +152,7 @@ export default function LocalAreaPage({ area }: LocalAreaPageProps) {
                   Call us or fill in our online form for a free, no-obligation removal quote in {area.name}.
                 </p>
                 <a href="tel:+447438447286" className="btn-primary w-full justify-center mb-3">+44 7438 447286</a>
-                <a href="/contact" className="btn-secondary w-full justify-center text-sm">Online Quote Form</a>
+                <Link href="/contact" className="btn-secondary w-full justify-center text-sm">Online Quote Form</Link>
               </div>
 
               <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
@@ -108,6 +163,22 @@ export default function LocalAreaPage({ area }: LocalAreaPageProps) {
                       <Link href={s.href} className="flex items-center gap-2 text-sm text-gray-600 hover:text-brand-600 transition-colors">
                         <span className="h-1.5 w-1.5 rounded-full bg-brand-400 shrink-0" />
                         {s.label} {area.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <BookOpen className="h-4 w-4 text-brand-500" />
+                  <h3 className="text-sm font-bold text-gray-900">Useful Moving Guides</h3>
+                </div>
+                <ul className="space-y-2">
+                  {blogLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-sm text-brand-600 hover:underline leading-snug block">
+                        {link.label}
                       </Link>
                     </li>
                   ))}
