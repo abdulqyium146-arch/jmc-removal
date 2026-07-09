@@ -52,6 +52,8 @@ const areas = [
 const additionalAreas = [
   "Leigh", "Salford", "Manchester", "Chester", "Crewe",
   "Altrincham", "Sale", "Stretford", "Eccles", "Newton-le-Willows", "Haydock",
+  "Stockton Heath", "Great Sankey", "Penketh", "Birchwood", "Latchford",
+  "Padgate", "Orford", "Woolston", "Fearnhead", "Lymm", "Culcheth", "Appleton",
 ];
 
 export default function CoverageAreas() {

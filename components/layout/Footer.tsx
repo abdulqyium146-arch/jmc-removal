@@ -8,7 +8,11 @@ const services = [
   { label: "House Clearance", href: "/house-clearance" },
   { label: "Furniture Removals", href: "/furniture-removals" },
   { label: "Storage Collection", href: "/storage-collection" },
-  { label: "Part Load Removals", href: "/house-removals#part-load" },
+  { label: "Office Removals", href: "/office-removals" },
+  { label: "Packing Service", href: "/packing-service" },
+  { label: "Piano Removal", href: "/piano-removal" },
+  { label: "End of Tenancy Clearance", href: "/end-of-tenancy-clearance" },
+  { label: "Part Load Removals", href: "/part-load-removals" },
 ];
 
 const areas = [
@@ -17,7 +21,11 @@ const areas = [
   { label: "Widnes", href: "/widnes-removals" },
   { label: "St Helens", href: "/st-helens-removals" },
   { label: "Northwich", href: "/northwich-removals" },
-  { label: "Cheshire", href: "/warrington-removals" },
+  { label: "Runcorn", href: "/runcorn-removals" },
+  { label: "Stockton Heath", href: "/stockton-heath-removals" },
+  { label: "Great Sankey", href: "/great-sankey-removals" },
+  { label: "Lymm", href: "/lymm-removals" },
+  { label: "Birchwood", href: "/birchwood-removals" },
 ];
 
 const company = [

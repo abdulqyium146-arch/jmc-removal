@@ -36,6 +36,18 @@ const areaSlugMap: Record<string, string> = {
   "St Helens": "/st-helens-removals",
   "Northwich": "/northwich-removals",
   "Runcorn": "/runcorn-removals",
+  "Stockton Heath": "/stockton-heath-removals",
+  "Latchford": "/latchford-removals",
+  "Great Sankey": "/great-sankey-removals",
+  "Penketh": "/penketh-removals",
+  "Birchwood": "/birchwood-removals",
+  "Padgate": "/padgate-removals",
+  "Orford": "/orford-removals",
+  "Woolston": "/woolston-removals",
+  "Fearnhead": "/fearnhead-removals",
+  "Lymm": "/lymm-removals",
+  "Culcheth": "/culcheth-removals",
+  "Appleton": "/appleton-removals",
 };
 
 const blogLinks = [
