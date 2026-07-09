@@ -14,21 +14,10 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
     }
   ],
   "shortcuts": [
@@ -37,28 +26,28 @@
       "short_name": "Free Quote",
       "description": "Request a free, no-obligation removal quote",
       "url": "/contact",
-      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
     },
     {
       "name": "House Removals",
       "short_name": "Removals",
       "description": "House removal services in Warrington",
       "url": "/house-removals",
-      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
     },
     {
       "name": "Call Us",
       "short_name": "Call",
-      "description": "Call JMC Removals on 01925 812700",
-      "url": "tel:01925812700",
-      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+      "description": "Call JMC Removals on +44 7438 447286",
+      "url": "tel:+447438447286",
+      "icons": [{ "src": "/icon.svg", "sizes": "any" }]
     }
   ],
   "screenshots": [
     {
-      "src": "/og-image.jpg",
-      "sizes": "1200x630",
-      "type": "image/jpeg",
+      "src": "/og-image.webp",
+      "sizes": "800x600",
+      "type": "image/webp",
       "label": "JMC Removals homepage"
     }
   ]

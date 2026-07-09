@@ -62,8 +62,8 @@ export const organizationSchema = {
   logo: {
     "@type": "ImageObject",
     "@id": `${SITE_URL}/#logo`,
-    url: `${SITE_URL}/android-chrome-512x512.png`,
-    contentUrl: `${SITE_URL}/android-chrome-512x512.png`,
+    url: `${SITE_URL}/icon.svg`,
+    contentUrl: `${SITE_URL}/icon.svg`,
     width: 512,
     height: 512,
     caption: "JMC Removals logo",
