@@ -6,7 +6,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import { generatePageMetadata } from "@/lib/metadata";
-import { faqSchema, serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { faqSchema, serviceSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -64,6 +64,7 @@ export default function PackingServicePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "Packing Service", description: "Professional removal packing service in Warrington. JMC Removals packs all or part of your home using quality materials. Fragile items and antiques handled with specialist care.", url: `${SITE_URL}/packing-service`, areaServed: "Warrington" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Packing Service", url: `${SITE_URL}/packing-service` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "Packing Service Warrington | Professional Removal Packing | JMC Removals", description: "Professional removal packing service in Warrington. JMC Removals packs all or part of your home using quality materials. Fragile items and antiques handled with specialist care.", url: `${SITE_URL}/packing-service` })) }} />
 
       <ServicePageHero
         badge="Packing Service Warrington"

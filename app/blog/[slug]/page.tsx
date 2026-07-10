@@ -3,8 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import CTA from "@/components/sections/CTA";
-import { SITE_URL } from "@/lib/utils";
-import { breadcrumbSchema } from "@/lib/schema";
+import { SITE_URL, SITE_NAME } from "@/lib/utils";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 interface RelatedItem {
   label: string;
@@ -390,8 +390,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: post.title,
       description: post.description,
       url: `${SITE_URL}/blog/${post.slug}`,
+      siteName: SITE_NAME,
+      locale: "en_GB",
       type: "article",
       publishedTime: post.date,
+      images: [{ url: `${SITE_URL}/og-image.webp`, width: 800, height: 600, type: "image/webp" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [`${SITE_URL}/og-image.webp`],
     },
   };
 }
@@ -403,17 +412,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
+    "@id": `${SITE_URL}/blog/${post.slug}#article`,
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { "@type": "Organization", name: "JMC Removals" },
-    publisher: {
-      "@type": "Organization",
-      name: "JMC Removals",
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/images/logo.png` },
-    },
+    dateModified: post.date,
+    author: { "@id": `${SITE_URL}/#organization` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/${post.slug}` },
+    image: { "@type": "ImageObject", url: `${SITE_URL}/og-image.webp`, width: 800, height: 600 },
     url: `${SITE_URL}/blog/${post.slug}`,
+    inLanguage: "en-GB",
   };
 
   const relatedServices = post.related.filter((r) => r.type === "service");
@@ -423,6 +433,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }, { name: post.title, url: `${SITE_URL}/blog/${post.slug}` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: `${post.title} | JMC Removals Blog`, description: post.description, url: `${SITE_URL}/blog/${post.slug}` })) }} />
 
       <ServicePageHero
         badge={post.category}

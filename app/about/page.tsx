@@ -8,7 +8,7 @@ import Stats from "@/components/sections/Stats";
 import Testimonials from "@/components/sections/Testimonials";
 import CTA from "@/components/sections/CTA";
 import { SITE_URL } from "@/lib/utils";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "About JMC Removals | Family-Owned Removal Company Warrington",
@@ -20,6 +20,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "About JMC Removals | Family-Owned Removal Company Warrington", description: "Learn about JMC Removals — a family-owned and operated removal company based in Warrington, Cheshire. Over 15 years helping families move stress-free across the North West.", url: `${SITE_URL}/about` })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "About Us", url: `${SITE_URL}/about` }])) }} />
 
       <ServicePageHero

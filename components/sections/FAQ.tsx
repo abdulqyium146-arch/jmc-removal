@@ -36,11 +36,7 @@ export default function FAQ({
             <p className="text-gray-600">{subtitle}</p>
           </div>
 
-          <div
-            className="space-y-3"
-            itemScope
-            itemType="https://schema.org/FAQPage"
-          >
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
               <motion.div
                 key={faq.question}
@@ -49,9 +45,6 @@ export default function FAQ({
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="rounded-xl border border-gray-200 overflow-hidden"
-                itemScope
-                itemType="https://schema.org/Question"
-                itemProp="mainEntity"
               >
                 <button
                   className="flex w-full items-center justify-between px-6 py-4 text-left"
@@ -59,10 +52,7 @@ export default function FAQ({
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <span
-                    className="text-sm font-semibold text-gray-900 pr-4"
-                    itemProp="name"
-                  >
+                  <span className="text-sm font-semibold text-gray-900 pr-4">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -81,14 +71,8 @@ export default function FAQ({
                       exit={{ height: 0 }}
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
-                      itemScope
-                      itemType="https://schema.org/Answer"
-                      itemProp="acceptedAnswer"
                     >
-                      <div
-                        className="px-6 pb-5 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-4"
-                        itemProp="text"
-                      >
+                      <div className="px-6 pb-5 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
                         {faq.answer}
                       </div>
                     </motion.div>

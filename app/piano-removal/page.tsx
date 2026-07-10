@@ -6,7 +6,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import { generatePageMetadata } from "@/lib/metadata";
-import { faqSchema, serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { faqSchema, serviceSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -65,6 +65,7 @@ export default function PianoRemovalPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "Piano Removal", description: "Specialist piano removal in Warrington. JMC Removals moves upright pianos and baby grand pianos with specialist equipment and trained crew. Safe, careful and fully insured.", url: `${SITE_URL}/piano-removal`, areaServed: "Warrington" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Piano Removal", url: `${SITE_URL}/piano-removal` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "Piano Removal Warrington | Piano Moving Service | JMC Removals", description: "Specialist piano removal in Warrington. JMC Removals moves upright pianos and baby grand pianos with specialist equipment and trained crew. Safe, careful and fully insured.", url: `${SITE_URL}/piano-removal` })) }} />
 
       <ServicePageHero
         badge="Piano Removal Warrington"

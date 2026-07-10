@@ -6,7 +6,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import { generatePageMetadata } from "@/lib/metadata";
-import { faqSchema, serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { faqSchema, serviceSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -70,6 +70,7 @@ export default function EndOfTenancyClearancePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "End of Tenancy Clearance", description: "Fast end of tenancy clearance in Warrington. JMC Removals provides professional property clearances for landlords, letting agents and tenants. Licensed waste carrier.", url: `${SITE_URL}/end-of-tenancy-clearance`, areaServed: "Warrington" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "End of Tenancy Clearance", url: `${SITE_URL}/end-of-tenancy-clearance` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "End of Tenancy Clearance Warrington | Landlord Clearance | JMC Removals", description: "Fast end of tenancy clearance in Warrington. JMC Removals provides professional property clearances for landlords, letting agents and tenants. Licensed waste carrier.", url: `${SITE_URL}/end-of-tenancy-clearance` })) }} />
 
       <ServicePageHero
         badge="End of Tenancy Clearance Warrington"

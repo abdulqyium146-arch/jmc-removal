@@ -3,7 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 import ServicePageHero from "@/components/sections/ServicePageHero";
 import ContactForm from "@/components/sections/ContactForm";
 import { SITE_URL } from "@/lib/utils";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Contact JMC Removals | Free Removal Quote Warrington",
@@ -15,6 +15,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "Contact JMC Removals | Free Removal Quote Warrington", description: "Contact JMC Removals for a free, no-obligation removal quote. Call +44 7438 447286 or fill in our online form. Serving Warrington, Wigan, Widnes, St Helens and the North West.", url: `${SITE_URL}/contact` })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Contact", url: `${SITE_URL}/contact` }])) }} />
 
       <ServicePageHero

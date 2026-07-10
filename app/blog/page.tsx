@@ -4,7 +4,7 @@ import ServicePageHero from "@/components/sections/ServicePageHero";
 import Link from "next/link";
 import CTA from "@/components/sections/CTA";
 import { SITE_URL } from "@/lib/utils";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Removal Tips & Moving Advice | JMC Removals Blog",
@@ -74,6 +74,7 @@ const categoryColors: Record<string, string> = {
 export default function BlogPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "Removal Tips & Moving Advice | JMC Removals Blog", description: "Expert moving tips, house removal advice and local area guides from JMC Removals. Practical help from Warrington's trusted removal company.", url: `${SITE_URL}/blog` })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Blog", url: `${SITE_URL}/blog` }])) }} />
 
       <ServicePageHero

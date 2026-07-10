@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "JMC Removals | House Removals Warrington",
     description:
       "Family-owned removal company in Warrington. Professional house removals, man & van & house clearance across Cheshire & the North West. Free quotes — call +44 7438 447286.",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "JMC Removals — House Removals Warrington" }],
+    images: [{ url: `${SITE_URL}/og-image.webp`, width: 800, height: 600, alt: "JMC Removals — House Removals Warrington", type: "image/webp" }],
   },
 };
 

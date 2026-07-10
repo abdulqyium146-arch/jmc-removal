@@ -10,9 +10,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: [
           "/api/",
-          "/_next/",
+          "/_next/static/",
           "/cdn-cgi/",
-          "/*.json$",
           "/search",
         ],
       },
@@ -21,11 +20,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "Googlebot",
         allow: "/",
-        crawlDelay: 1,
       },
       {
         userAgent: "Googlebot-Image",
-        allow: ["/", "/og-image.jpg", "/android-chrome-512x512.png"],
+        allow: ["/", "/og-image.webp", "/icon.svg"],
       },
 
       // ── Bing ─────────────────────────────────────────────────────────────

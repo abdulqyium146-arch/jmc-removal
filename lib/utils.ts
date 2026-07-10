@@ -38,11 +38,24 @@ export const BUSINESS_HOURS = [
 ];
 
 export const SERVICE_AREAS = [
-  { name: "Warrington", slug: "warrington-removals", county: "Cheshire" },
-  { name: "Wigan", slug: "wigan-removals", county: "Greater Manchester" },
-  { name: "Widnes", slug: "widnes-removals", county: "Cheshire" },
-  { name: "St Helens", slug: "st-helens-removals", county: "Merseyside" },
-  { name: "Northwich", slug: "northwich-removals", county: "Cheshire" },
+  { name: "Warrington",    slug: "warrington-removals",      county: "Cheshire" },
+  { name: "Wigan",         slug: "wigan-removals",           county: "Greater Manchester" },
+  { name: "Widnes",        slug: "widnes-removals",          county: "Cheshire" },
+  { name: "St Helens",     slug: "st-helens-removals",       county: "Merseyside" },
+  { name: "Northwich",     slug: "northwich-removals",       county: "Cheshire" },
+  { name: "Runcorn",       slug: "runcorn-removals",         county: "Cheshire" },
+  { name: "Stockton Heath",slug: "stockton-heath-removals",  county: "Cheshire" },
+  { name: "Latchford",     slug: "latchford-removals",       county: "Cheshire" },
+  { name: "Great Sankey",  slug: "great-sankey-removals",    county: "Cheshire" },
+  { name: "Penketh",       slug: "penketh-removals",         county: "Cheshire" },
+  { name: "Birchwood",     slug: "birchwood-removals",       county: "Cheshire" },
+  { name: "Padgate",       slug: "padgate-removals",         county: "Cheshire" },
+  { name: "Orford",        slug: "orford-removals",          county: "Cheshire" },
+  { name: "Woolston",      slug: "woolston-removals",        county: "Cheshire" },
+  { name: "Fearnhead",     slug: "fearnhead-removals",       county: "Cheshire" },
+  { name: "Lymm",          slug: "lymm-removals",            county: "Cheshire" },
+  { name: "Culcheth",      slug: "culcheth-removals",        county: "Cheshire" },
+  { name: "Appleton",      slug: "appleton-removals",        county: "Cheshire" },
 ];
 
 export const SERVICES = [
@@ -99,27 +112,3 @@ export function getCanonicalUrl(path: string): string {
   return `${SITE_URL}${cleanPath}`;
 }
 
-export function generateLocalPageSchema(areaName: string, slug: string) {
-  return {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "MovingCompany"],
-    name: `${BUSINESS_NAME} - Removals ${areaName}`,
-    description: `Professional removals company serving ${areaName} and surrounding areas. House removals, man and van, house clearance and furniture removals.`,
-    url: `${SITE_URL}/${slug}`,
-    telephone: BUSINESS_PHONE,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: BUSINESS_ADDRESS.street,
-      addressLocality: BUSINESS_ADDRESS.city,
-      addressRegion: BUSINESS_ADDRESS.region,
-      postalCode: BUSINESS_ADDRESS.postcode,
-      addressCountry: BUSINESS_ADDRESS.countryCode,
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: BUSINESS_GEO.latitude,
-      longitude: BUSINESS_GEO.longitude,
-    },
-    areaServed: { "@type": "City", name: areaName },
-  };
-}

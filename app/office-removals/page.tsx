@@ -6,7 +6,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import { generatePageMetadata } from "@/lib/metadata";
-import { faqSchema, serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { faqSchema, serviceSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -74,6 +74,7 @@ export default function OfficeRemovalsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "Office Removals", description: "Professional office and commercial removals in Warrington and the North West. JMC Removals handles IT equipment, office furniture and business relocations with minimal downtime.", url: `${SITE_URL}/office-removals`, areaServed: "Warrington" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Office Removals", url: `${SITE_URL}/office-removals` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "Office Removals Warrington | Commercial Removals | JMC Removals", description: "Professional office and commercial removals in Warrington and the North West. JMC Removals handles IT equipment, office furniture and business relocations with minimal downtime.", url: `${SITE_URL}/office-removals` })) }} />
 
       <ServicePageHero
         badge="Office Removals Warrington"

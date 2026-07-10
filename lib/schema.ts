@@ -70,9 +70,9 @@ export const organizationSchema = {
   },
   image: {
     "@type": "ImageObject",
-    url: `${SITE_URL}/og-image.jpg`,
-    width: 1200,
-    height: 630,
+    url: `${SITE_URL}/og-image.webp`,
+    width: 800,
+    height: 600,
     caption: "JMC Removals — House Removals Warrington",
   },
   address: postalAddress,
@@ -224,12 +224,8 @@ export const websiteSchema = {
   inLanguage: "en-GB",
   copyrightYear: new Date().getFullYear(),
   potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${SITE_URL}/?s={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
+    "@type": "ReadAction",
+    target: [SITE_URL],
   },
 };
 
@@ -399,7 +395,4 @@ export const webPageSchema = (page: {
   inLanguage: "en-GB",
   isPartOf: { "@id": `${SITE_URL}/#website` },
   about: { "@id": `${SITE_URL}/#organization` },
-  ...(page.breadcrumb
-    ? { breadcrumb: breadcrumbSchema(page.breadcrumb) }
-    : {}),
 });

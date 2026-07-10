@@ -6,7 +6,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import { generatePageMetadata } from "@/lib/metadata";
-import { faqSchema, serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { faqSchema, serviceSchema, breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/utils";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -65,6 +65,7 @@ export default function PartLoadRemovalsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "Part Load Removals", description: "Affordable part load removals in Warrington. Moving a small amount? JMC Removals provides cost-effective part load removal services — you only pay for the space you use.", url: `${SITE_URL}/part-load-removals`, areaServed: "Warrington" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Part Load Removals", url: `${SITE_URL}/part-load-removals` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "Part Load Removals Warrington | Small Move Service | JMC Removals", description: "Affordable part load removals in Warrington. Moving a small amount? JMC Removals provides cost-effective part load removal services — you only pay for the space you use.", url: `${SITE_URL}/part-load-removals` })) }} />
 
       <ServicePageHero
         badge="Part Load Removals Warrington"

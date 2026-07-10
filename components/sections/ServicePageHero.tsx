@@ -32,25 +32,23 @@ export default function ServicePageHero({
       <div className="container relative">
         {/* Breadcrumbs */}
         <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex items-center gap-2 text-xs text-gray-400" itemScope itemType="https://schema.org/BreadcrumbList">
-            <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-              <Link href="/" className="hover:text-brand-400 transition-colors flex items-center gap-1" itemProp="item">
+          <ol className="flex items-center gap-2 text-xs text-gray-400">
+            <li>
+              <Link href="/" className="hover:text-brand-400 transition-colors flex items-center gap-1">
                 <Home className="h-3 w-3" />
-                <span itemProp="name">Home</span>
+                <span>Home</span>
               </Link>
-              <meta itemProp="position" content="1" />
             </li>
             {breadcrumbs.map((crumb, i) => (
-              <li key={crumb.href} className="flex items-center gap-2" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+              <li key={crumb.href} className="flex items-center gap-2">
                 <ChevronRight className="h-3 w-3 text-gray-600" />
                 {i === breadcrumbs.length - 1 ? (
-                  <span className="text-brand-400 font-medium" itemProp="name">{crumb.label}</span>
+                  <span className="text-brand-400 font-medium">{crumb.label}</span>
                 ) : (
-                  <Link href={crumb.href} className="hover:text-brand-400 transition-colors" itemProp="item">
-                    <span itemProp="name">{crumb.label}</span>
+                  <Link href={crumb.href} className="hover:text-brand-400 transition-colors">
+                    <span>{crumb.label}</span>
                   </Link>
                 )}
-                <meta itemProp="position" content={String(i + 2)} />
               </li>
             ))}
           </ol>
