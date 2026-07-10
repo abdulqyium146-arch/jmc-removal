@@ -105,28 +105,18 @@ export default function Testimonials() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
               className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
-              itemScope
-              itemType="https://schema.org/Review"
             >
               <div className="flex items-start justify-between mb-4">
                 <StarRating rating={t.rating} />
                 <Quote className="h-5 w-5 text-brand-200 shrink-0" />
               </div>
-              <blockquote
-                className="text-sm text-gray-600 leading-relaxed mb-5"
-                itemProp="reviewBody"
-              >
+              <blockquote className="text-sm text-gray-600 leading-relaxed mb-5">
                 &quot;{t.text}&quot;
               </blockquote>
               <div className="flex items-center justify-between">
                 <div>
-                  <div
-                    className="text-sm font-semibold text-gray-900"
-                    itemProp="author"
-                    itemScope
-                    itemType="https://schema.org/Person"
-                  >
-                    <span itemProp="name">{t.name}</span>
+                  <div className="text-sm font-semibold text-gray-900">
+                    {t.name}
                   </div>
                   <div className="text-xs text-gray-500">
                     {t.location} · {t.date}
