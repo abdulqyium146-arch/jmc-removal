@@ -23,6 +23,8 @@ const navLinks = [
       { label: "Piano Removal", href: "/piano-removal" },
       { label: "End of Tenancy", href: "/end-of-tenancy-clearance" },
       { label: "Part Load Removals", href: "/part-load-removals" },
+      { label: "Student Removals", href: "/student-removals" },
+      { label: "Long Distance", href: "/long-distance-removals" },
     ],
   },
   {

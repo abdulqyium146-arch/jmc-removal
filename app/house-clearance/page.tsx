@@ -62,6 +62,7 @@ export default function HouseClearancePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "House Clearance", description: "Professional house clearance service in Warrington, Cheshire. Full and partial property clearances including probate, landlord and estate clearances.", url: `${SITE_URL}/house-clearance`, areaServed: "Warrington" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "House Clearance", url: `${SITE_URL}/house-clearance` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "House Clearance Warrington | Professional Property Clearance | JMC Removals", description: "Professional house clearance in Warrington. Full and partial property clearances — probate, landlord and estate clearances. Respectful, efficient and fully licensed.", url: `${SITE_URL}/house-clearance` })) }} />
 
       <ServicePageHero
         badge="House Clearance Warrington"

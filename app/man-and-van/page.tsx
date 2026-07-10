@@ -62,6 +62,7 @@ export default function ManAndVanPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "Man and Van", description: "Affordable man and van hire service in Warrington, Cheshire. Professional driver and van for smaller moves, single items, student relocations and more.", url: `${SITE_URL}/man-and-van`, areaServed: "Warrington" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Man and Van", url: `${SITE_URL}/man-and-van` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "Man and Van Warrington | Affordable Man & Van Hire | JMC Removals", description: "Affordable man and van hire in Warrington. JMC Removals provides a reliable, friendly man and van service for smaller moves, single items, student moves and more.", url: `${SITE_URL}/man-and-van` })) }} />
 
       <ServicePageHero
         badge="Man & Van Warrington"

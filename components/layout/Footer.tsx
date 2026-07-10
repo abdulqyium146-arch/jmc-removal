@@ -13,6 +13,8 @@ const services = [
   { label: "Piano Removal", href: "/piano-removal" },
   { label: "End of Tenancy Clearance", href: "/end-of-tenancy-clearance" },
   { label: "Part Load Removals", href: "/part-load-removals" },
+  { label: "Student Removals", href: "/student-removals" },
+  { label: "Long Distance Removals", href: "/long-distance-removals" },
 ];
 
 const areas = [

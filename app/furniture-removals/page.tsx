@@ -62,6 +62,7 @@ export default function FurnitureRemovalsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "Furniture Removals", description: "Professional furniture removal and transport service in Warrington, Cheshire. Single items, pianos, antiques and all types of furniture moved carefully across the North West.", url: `${SITE_URL}/furniture-removals`, areaServed: "Warrington" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Furniture Removals", url: `${SITE_URL}/furniture-removals` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "Furniture Removals Warrington | Single Item & Furniture Transport | JMC Removals", description: "Specialist furniture removals in Warrington. Single items, sofas, antiques, pianos and all furniture types moved carefully across Cheshire and the North West.", url: `${SITE_URL}/furniture-removals` })) }} />
 
       <ServicePageHero
         badge="Furniture Removals Warrington"

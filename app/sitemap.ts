@@ -40,6 +40,8 @@ const servicePages: SitemapEntry[] = [
   "piano-removal",
   "end-of-tenancy-clearance",
   "part-load-removals",
+  "student-removals",
+  "long-distance-removals",
 ].map((slug) => ({
   url: `${SITE_URL}/${slug}`,
   lastModified: now,

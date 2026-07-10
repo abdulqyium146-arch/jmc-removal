@@ -8,7 +8,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import CoverageAreas from "@/components/sections/CoverageAreas";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
-import { faqSchema, howToSchema } from "@/lib/schema";
+import { faqSchema, howToSchema, organizationSchema, websiteSchema, serviceListSchema } from "@/lib/schema";
 import { homeFaqs } from "@/lib/data/faqs";
 import { SITE_URL } from "@/lib/utils";
 
@@ -56,18 +56,11 @@ const howToSteps = [
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema(homeFaqs)),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(howToSchema(howToSteps)),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceListSchema()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(homeFaqs)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema(howToSteps)) }} />
 
       <Hero />
       <Stats />

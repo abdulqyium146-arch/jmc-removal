@@ -55,6 +55,7 @@ export default function StorageCollectionPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "Storage Collection", description: "Storage pickup and delivery service in Warrington, Cheshire. We collect your belongings from storage facilities and deliver to your new home across the North West.", url: `${SITE_URL}/storage-collection`, areaServed: "Warrington" })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Home", url: SITE_URL }, { name: "Storage Collection", url: `${SITE_URL}/storage-collection` }])) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ name: "Storage Collection Warrington | Storage Pickup & Delivery | JMC Removals", description: "Storage collection and delivery service in Warrington. JMC Removals collects your stored belongings from any storage facility and delivers them to your new home.", url: `${SITE_URL}/storage-collection` })) }} />
 
       <ServicePageHero
         badge="Storage Collection Warrington"
