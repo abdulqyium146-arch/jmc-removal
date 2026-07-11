@@ -138,6 +138,7 @@ export default function LongDistanceRemovalsPage() {
                 <ul>
                   <li><strong>London &amp; the South East</strong> — approximately 190 miles, typically a full day's move</li>
                   <li><strong>Birmingham &amp; the Midlands</strong> — approximately 100 miles, half-day to full-day move</li>
+                  <li><strong>Wolverhampton &amp; the Black Country</strong> — approximately 80 miles via the M6; we partner with <a href="https://getrapidremovals.co.uk/" className="text-brand-600 hover:underline" target="_blank" rel="noreferrer">Get Rapid Removals</a> for local assistance at the Wolverhampton end — see our <Link href="/partners" className="text-brand-600 hover:underline">trusted partners page</Link></li>
                   <li><strong>Leeds &amp; Yorkshire</strong> — approximately 65 miles, typically a half-day move</li>
                   <li><strong>Edinburgh &amp; Scotland</strong> — approximately 230 miles, typically a two-day move</li>
                   <li><strong>Cardiff &amp; Wales</strong> — approximately 130 miles, typically a full-day move</li>

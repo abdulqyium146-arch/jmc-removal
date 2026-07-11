@@ -100,6 +100,11 @@ const blogPosts: SitemapEntry[] = [
   priority: 0.55,
 }));
 
+// ─── Partner pages ────────────────────────────────────────────────────────────
+const partnerPages: SitemapEntry[] = [
+  { url: `${SITE_URL}/partners`, lastModified: now, changeFrequency: "monthly", priority: 0.60 },
+];
+
 // ─── Legal pages ──────────────────────────────────────────────────────────────
 const legalPages: SitemapEntry[] = [
   { url: `${SITE_URL}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.30 },
@@ -115,6 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areaPages,
     ...blogIndex,
     ...blogPosts,
+    ...partnerPages,
     ...legalPages,
   ];
 }
